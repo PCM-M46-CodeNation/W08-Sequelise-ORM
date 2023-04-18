@@ -1,32 +1,33 @@
 {
-  "name": "w08-sequelise-orm",
-  "version": "1.0.0",
-  "description": "Week 8 - Sequelise ORM",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PCM-M46-CodeNation/W08-Sequelise-ORM.git"
-  },
-  "keywords": [
-    "codenation",
-    "coursework",
-    "orm",
-    "mysql",
-    "sequlize"
-  ],
-  "author": "Peter C. Matthews",
-  "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/PCM-M46-CodeNation/W08-Sequelise-ORM/issues"
-  },
-  "homepage": "https://github.com/PCM-M46-CodeNation/W08-Sequelise-ORM#readme",
-  "dependencies": {
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "mysql2": "^3.2.3",
-    "sequelize": "^6.31.0"
-  }
+	"name": "w08-sequelise-orm",
+	"version": "1.0.0",
+	"description": "Week 8 - Sequelise ORM",
+	"main": "./src/server.js",
+	"scripts": {
+		"start": "node src/server.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/PCM-M46-CodeNation/W08-Sequelise-ORM.git"
+	},
+	"keywords": [
+		"codenation",
+		"coursework",
+		"orm",
+		"mysql",
+		"sequlize"
+	],
+	"author": "Peter C. Matthews",
+	"license": "UNLICENSED",
+	"bugs": {
+		"url": "https://github.com/PCM-M46-CodeNation/W08-Sequelise-ORM/issues"
+	},
+	"homepage": "https://github.com/PCM-M46-CodeNation/W08-Sequelise-ORM#readme",
+	"dependencies": {
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2",
+		"mysql2": "^3.2.3",
+		"sequelize": "^6.31.0"
+	}
 }
