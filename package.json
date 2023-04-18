@@ -5,6 +5,7 @@
 	"main": "./src/server.js",
 	"scripts": {
 		"start": "node src/server.js",
+		"monitor": "nodemon src/server.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
@@ -16,7 +17,7 @@
 		"coursework",
 		"orm",
 		"mysql",
-		"sequlize"
+		"sequelize"
 	],
 	"author": "Peter C. Matthews",
 	"license": "UNLICENSED",
