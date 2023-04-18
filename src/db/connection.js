@@ -1,8 +1,14 @@
 const { Sequelize } = require("sequelize");
 
-const context = new Sequelize(process.env.MYSQL_CONNECTION_STRING);
-context.authenticate();
+module.exports = {
+	context: new Sequelize(process.env.MYSQL_CONNECTION_STRING),
 
-console.log("MySQL DB connected on port 3306.");
-
-module.exports = context;
+	connect: async function () {
+		try {
+			await this.context.authenticate();
+			console.log("DB Connection established.");
+		} catch (error) {
+			console.log(error);
+		}
+	},
+};
