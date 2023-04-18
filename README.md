@@ -22,7 +22,7 @@ Create a Sequelize application that connects to a Clever Cloud database
  - [ ] POST - adds a book to the DB
  - [ ] GET - gets all books
  - [ ] GET - gets a book by author
- - [ ] PATCH - dynamically updates a book on title
+ - [ ] PUT - dynamically updates a book on title
  - [ ] DELETE - deletes a single book by title
  - [ ] DELETE - deletes all books
  
