@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/PCM-M46-CodeNation/W08-Sequelise-ORM/issues"
   },
-  "homepage": "https://github.com/PCM-M46-CodeNation/W08-Sequelise-ORM#readme"
+  "homepage": "https://github.com/PCM-M46-CodeNation/W08-Sequelise-ORM#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
