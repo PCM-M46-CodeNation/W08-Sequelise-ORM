@@ -3,6 +3,6 @@ const router = Router();
 
 const { commands, queries } = require("./controllers");
 
-router.post("/", commands.addGenre);
+router.post("/addgenre", commands.addGenre);
 
 module.exports = router;
