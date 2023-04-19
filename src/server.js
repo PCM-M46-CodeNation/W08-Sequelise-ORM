@@ -9,7 +9,9 @@ db.connect().then(() => {
 	map.synchroniseTables();
 	express()
 		.use(express.json())
+		.use("/authors", require("./api/authors/routes"))
 		.use("/books", require("./api/books/routes"))
+		.use("/genres", require("./api/genres/routes"))
 		.listen(expressServerPort, () => {
 			console.log(`Express is listening on port ${expressServerPort}`);
 		});
