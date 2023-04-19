@@ -5,8 +5,8 @@ const expressServerPort = process.env.EXPRESS_SERVER_PORT || 5001;
 
 db.connect().then(() => {
 	const map = require("./db/mapping");
-	map.synchroniseTables();
 	map.mapRelationships();
+	map.synchroniseTables();
 	express()
 		.use(express.json())
 		.use("/books", require("./api/books/routes"))
