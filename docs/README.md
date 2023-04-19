@@ -38,12 +38,14 @@ Create a Sequelize application that connects to a Clever Cloud database
 
  **Genre Routes**
  - [ ] POST - adds an author to the DB
- - [ ] GET - gets a single author by author name and retrieves associated books
+ - [ ] GET - gets a single author by author name, and retrieves associated books
 
 **Personal Stretch Goals:**
 
  - [ ] Add primary keys to the tables.
  - [ ] Implement the CQRS pattern, splitting read and write operations.
+ - [ ] Create React front-end to interact with the DB.
+ - [ ] Use Tailwind CSS to style the React front-end.
 
 ## Implementation
 
