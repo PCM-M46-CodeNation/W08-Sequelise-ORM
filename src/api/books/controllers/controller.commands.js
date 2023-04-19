@@ -62,4 +62,31 @@ module.exports = {
 				}),
 			);
 	},
+
+	/**
+	 * Deletes all existing books within the database, and sends a JSON response with a
+	 * success message and the number of records removed, or an error message and error object.
+	 *
+	 * @function
+	 * @name deleteAllBooks
+	 * @param {Object} _ - The request object. Discarded within this method.
+	 * @param {Object} res - The response object to send the JSON response.
+	 * @returns {Object} 201 - The number of records removed.
+	 * @throws {Error} 501 - The details of the exception that was thrown.
+	 */
+	deleteAllBooks: (_, res) => {
+		Book.destroy({ truncate: true })
+			.then(n => {
+				res.status(202).json({
+					message: "successfully deleted",
+					result: n,
+				});
+			})
+			.catch(e =>
+				res.status(501).json({
+					message: e.message,
+					error: e,
+				}),
+			);
+	},
 };

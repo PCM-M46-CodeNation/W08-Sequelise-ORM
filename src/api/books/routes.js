@@ -8,5 +8,6 @@ router.get("/getallbooks", queries.getAllBooks);
 router.get("/getbook/:title", queries.getSingleBookByTitle);
 
 router.delete("/deletebook", commands.deleteBook);
+router.delete("/deleteallbooks", commands.deleteAllBooks);
 
 module.exports = router;
