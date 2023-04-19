@@ -4,8 +4,11 @@ const router = Router();
 const { commands, queries } = require("./controllers");
 
 router.post("/addbook", commands.addBook);
+
 router.get("/getallbooks", queries.getAllBooks);
 router.get("/getbook/:title", queries.getSingleBookByTitle);
+
+router.put("/updatebook", commands.updateBook);
 
 router.delete("/deletebook", commands.deleteBook);
 router.delete("/deleteallbooks", commands.deleteAllBooks);
