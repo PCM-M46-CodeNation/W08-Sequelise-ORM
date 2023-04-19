@@ -17,7 +17,7 @@ module.exports = {
 		try {
 			const author = await Author.findOne({
 				where: { authorName: req.params.authorname },
-				include: { model: Book },
+				include: { all: true, nested: true },
 			});
 			res.status(200).json({
 				message: "success",
@@ -25,8 +25,8 @@ module.exports = {
 			});
 		} catch (error) {
 			res.status(501).json({
-				message: e.message,
-				error: e,
+				message: error.message,
+				error: error,
 			});
 		}
 	},
