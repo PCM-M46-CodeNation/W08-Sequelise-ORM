@@ -24,13 +24,17 @@ Endpoint/route
 Associated Function
 ---
 
-    getAllBooksByGenre
+    getAllBooks
 
 Data Requirements
 ---
 
 DB
 ---
+
+    Author:
+        id: number
+        authorName: string
 
     Genre:
         id: number
@@ -39,8 +43,8 @@ DB
     Book:
         id: number
         title: string   
-        author: string
-        genre: string
+        author_id: number
+        genre_id: number
 
 Request
 ---
