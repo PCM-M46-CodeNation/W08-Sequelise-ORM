@@ -31,14 +31,14 @@ Create a Sequelize application that connects to a Clever Cloud database
  - [ ] GET - gets a single author by author name and retrieves associated books
 
 ### Stretch Goals:
- - [ ] Create two Genre routes given in the design docs.
  - [x] Create an association between Books and Author, where:
    - [x] Author has many Book
    - [x] Book belongs to Author
 
  **Genre Routes**
- - [ ] POST - adds an author to the DB
- - [ ] GET - gets a single author by author name, and retrieves associated books
+ - [ ] Create two Genre routes given in the design docs.
+   - [x] POST - adds an genre to the DB
+   - [ ] GET - gets a single genre by genre name, and retrieves associated books
 
 **Personal Stretch Goals:**
 
