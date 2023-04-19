@@ -6,20 +6,20 @@ const Genre = require("../api/genres/model");
  * Create table structure between DB and ORM.
  */
 const synchroniseTables = function () {
-	Author.sync({ alter: true });
-	Genre.sync({ alter: true });
-	Book.sync({ alter: true });
+	Author.sync();
+	Genre.sync();
+	Book.sync();
 };
 
 /**
- * Create relationalmappings between tables.
+ * Create relational mappings between tables.
  */
 const mapRelationships = function () {
-	Author.hasMany(Book);
-	Book.belongsTo(Author);
+	Author.hasMany(Book, { foreignKey: "author_id" });
+	Book.belongsTo(Author, { foreignKey: "author_id" });
 
-	Genre.hasMany(Book);
-	Book.belongsTo(Genre);
+	Genre.hasMany(Book, { foreignKey: "genre_id" });
+	Book.belongsTo(Genre, { foreignKey: "genre_id" });
 };
 
 module.exports = {
