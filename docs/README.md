@@ -11,24 +11,24 @@ This repository contains my submission for the [Master Coding](https://wearecode
 Create a Sequelize application that connects to a Clever Cloud database
 
 ### Requirements:
- - [ ] Create both a Books and an Author model and the following routes/controllers.
- - [ ] Use design docs for endpoints/data formatting.
- - [ ] Test all routes with Thunder Client
+ - [x] Create both a Books and an Author model and the following routes/controllers.
+ - [x] Use design docs for endpoints/data formatting.
+ - [x] Test all routes with Thunder Client
  - [x] Create an association between Books and Author, where:
    - [x] Author has many Book
    - [x] Book belongs to Author
  
  **Book Routes**
- - [ ] POST - adds a book to the DB
- - [ ] GET - gets all books
- - [ ] GET - gets a book by author
- - [ ] PUT - dynamically updates a book on title
- - [ ] DELETE - deletes a single book by title
- - [ ] DELETE - deletes all books
+ - [x] POST - adds a book to the DB
+ - [x] GET - gets all books
+ - [x] GET - gets a book by title
+ - [x] PUT - dynamically updates a book on title
+ - [x] DELETE - deletes a single book by title
+ - [x] DELETE - deletes all books
  
  **Author Routes**
- - [ ] POST - adds an author to the DB
- - [ ] GET - gets a single author by author name and retrieves associated books
+ - [x] POST - adds an author to the DB
+ - [x] GET - gets a single author by author name and retrieves associated books
 
 ### Stretch Goals:
  - [x] Create an association between Books and Author, where:
@@ -36,16 +36,16 @@ Create a Sequelize application that connects to a Clever Cloud database
    - [x] Book belongs to Author
 
  **Genre Routes**
- - [ ] Create two Genre routes given in the design docs.
+ - [x] Create two Genre routes given in the design docs.
    - [x] POST - adds an genre to the DB
-   - [ ] GET - gets a single genre by genre name, and retrieves associated books
+   - [x] GET - gets a single genre by genre name, and retrieves associated books
 
 **Personal Stretch Goals:**
 
- - [ ] Add primary keys to the tables.
- - [ ] Implement the CQRS pattern, splitting read and write operations.
+ - [x] Implement the CQRS pattern, splitting read and write operations.
  - [ ] Create React front-end to interact with the DB.
  - [ ] Use Tailwind CSS to style the React front-end.
+ - [ ] Produce a Database Analysis Report and Roadmap.
 
 ## Implementation
 
@@ -53,4 +53,12 @@ With this project, I wanted to focus on implementing a solution, directly to the
 
 ## Retrospective
 
-TODO: Write Retroscpective
+It is understood that, for purposes of education, and demonstating the use of specific syllabus requirements, this project is a contrived example of a real-world API and database. That being said, I did want to expand on some areas of the project that took my interest.  
+
+### PUT/PATCH Equivocation
+
+Within the design specs for this project, it specifies that a PUT request should be used for the updating of a book. However, there is an important distinction to be made, between the PUT and PATCH HTTP verbs, that means that means that this API is not being implemented properly, as written. The distinction between the two is thus:
+
+A PUT command should be used to update one or more records within a database, by completely replacing the record, with new information in each field, even if that information is the same as it was previously. The PUT verb denotes that request object **must** contain a fully-formed, valid record that will be used to overwrite the record that is currently within the database. The PUT verb *specifically disallows* partial record updates.
+
+This is as opposed to the PATCH command, that *specifically allows* partial record updates. While a PATCH request body can contain the same fully-formed data as a PUT request, a PUT request **must not** perform partial updates. The PATCH request would usually contain a dictionary of fields, with updated values, for a single record, it can also be used to update values on multiple records, with a filter given within the body. Within this project, the request is made as a dynamic update, for a single field.
