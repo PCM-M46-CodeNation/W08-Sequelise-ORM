@@ -35,9 +35,9 @@ module.exports = {
 	 * @function
 	 * @name updateBook
 	 * @param {Object} req - The request object containing the book data in the request body.
-	 * @param {Object} res - The response object to send the JSON response.
 	 * @returns {Object} 201 - The updated Book record.
 	 * @throws {Error} 501 - The details of the exception that was thrown.
+	 * @param {Object} res - The response object to send the JSON response.
 	 */
 	updateBook: (req, res) => {
 		const { title, key, value } = req.body;
