@@ -37,7 +37,7 @@ module.exports = {
 	 * @name getSingleBookByTitle
 	 * @param {Object} req - The request object containing the title in the request parameters.
 	 * @param {Object} res - The response object to send the JSON response.
-	 * @returns {Object} 200 - An array of all the books in the database.
+	 * @returns {Object} 200 - The detail of the single requested book.
 	 * @throws {Error} 501 - The details of the exception that was thrown.
 	 */
 	getSingleBookByTitle: async (req, res) => {
