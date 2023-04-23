@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const cors = require("cors");
 const expressServerPort = process.env.EXPRESS_SERVER_PORT || 5001;
 
 const db = require("./db/connection");
@@ -11,6 +12,7 @@ db.connect().then(() => {
 
 	// Launch the RESTFul API.
 	express()
+		.use(cors())
 		.use(express.json())
 		.use("/authors", require("./api/authors/routes"))
 		.use("/books", require("./api/books/routes"))
