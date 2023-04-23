@@ -44,17 +44,10 @@ Create a Sequelize application that connects to a Clever Cloud database
 
  - [x] Implement the CQRS pattern, splitting read and write operations.
  - [x] Write Good Path and Bad Path user stories, in Gherkin Syntax.
- - [x] Produce a Database Analysis Report and Roadmap.
- - [ ] Create React front-end to interact with the DB.
- - [ ] Use Tailwind CSS to style the React front-end.
 
 ## Implementation
 
 With this project, I wanted to focus on implementing a solution, directly to the given specs for each of the routes. This has still allowed me to use my own initiative so far as project architecture is concerned; but, there are a lot of design choices that I would not personally choose; mainly naming conventions, and response payloads. But, this a part of the discipline that is needed, when working with existing infrastructure.
-
-### React Front-End
-
-TODO: Write React overview.
 
 ## Retrospective
 
