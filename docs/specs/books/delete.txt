@@ -36,9 +36,9 @@ DB
 
     Book:
         id: integer 
-        title: string   
-        author: string
-        genre: string
+        title: string
+        genre_id: integer
+        author_id: integer
 
 Request
 ---

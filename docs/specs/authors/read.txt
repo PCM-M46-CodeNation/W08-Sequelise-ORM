@@ -30,16 +30,19 @@ Data Requirements
 DB
 ---
 
+    Genre:
+        id: integer
+        genre: string 
+
     Author:
         id: integer
         authorName: string 
 
     Book:
         id: integer 
-        title: string   
-        author: string
-        genre: string
-        AuthorId: number
+        title: string
+        genre_id: integer
+        author_id: integer
 
 Request
 ---
@@ -68,10 +71,9 @@ Response
                             type: object
                             properties:
                                 id: integer 
-                                title: string   
-                                author: string
-                                genre: string 
-                                AuthorId: number
+                                title: string
+                                genre_id: integer
+                                author_id: integer
 
     ErrorResponse:
         type: object
